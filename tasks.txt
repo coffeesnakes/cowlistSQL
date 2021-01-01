@@ -1,0 +1,16 @@
+Tasks
+Set up development environment  x
+Structure project to transpile using webpack   x
+Serve application with Node/Express    x
+Create GroceryList database in MySQL   x
+Connect Node server to MySQL DB using npm mysql package   x
+Build front end
+Develop front end application (add groceries to local state)
+Build working backend
+Create route GET /api/groceries
+Create route POST /api/groceries
+Create MySQL schema
+Write DB queries for GET and POST requests
+Refactor frontend to connect to backend
+
+ doot doot
