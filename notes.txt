@@ -1,0 +1,20 @@
+
+
+
+
+                    _______________PART 2_______________
+
+Currently have static data rendering, and with now creating a GET request using axios
+Axios will use the server, and see app.get('/cows', and then a cb to controllers)
+Inside of server we have controllers we send server status and data to the models
+The models have the actual query string and a callback to the database.
+After each of these steps is complete axios will **.then** take the response from the server
+And use that response.data to setState
+              THIS IS the getCows functionality.
+
+We then use this data we've gotten from the server and after binding the get request to app
+we can then use props to pass down this information throughout the App, because its a tree.
+in the render and return of app where we hold all of our components we pass cows={this.state.cows}
+inside of the actual Entry.jsx file we will access props to display data dynamically.
+
+              THIS IS RENDERING DYNAMIC DATA

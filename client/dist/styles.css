@@ -19,13 +19,18 @@ ul {
   padding-left: 0px;
 }
 
-.movies {
+.cows {
  list-style-type: none;
    padding: 10px;
-  font-size: 15px;
+  font-size: 23px;
    justify-content: space-between;
    font-weight: 300;
    margin: 20px 0 0;
 
 
+}
+
+.header {
+  color: white;
+  font-size: 10px;
 }

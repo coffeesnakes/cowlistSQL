@@ -1,5 +1,6 @@
 import React from "react";
 import { Fragment } from 'react';
+import Header from './Header.jsx';
 import List from './List.jsx';
 import Form from './Form.jsx';
 import axios from "axios";
@@ -9,10 +10,13 @@ class App extends React.Component {
     super(props);
     this.state = {
       cows: [],
-    };
+    }
+
     // bindings here
     this.getCows = this.getCows.bind(this);
   }
+
+
   // mount initial database here
   componentDidMount() {
     this.getCows();
@@ -33,7 +37,9 @@ class App extends React.Component {
   render() {
     return (
       <Fragment>
-        <List />
+
+        < Header />
+        <List cows={this.state.cows} />
         <Form />
 
       </Fragment>

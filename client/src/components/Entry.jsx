@@ -1,10 +1,11 @@
 import React from "react";
 
-const Entry = (props) => {
+const Entry = ({cow}) => {
+  console.log('log from entry: ', cow)
   return (
     <li>
-      <span> Name: Harold</span>
-      <span> Description: Is a sleek fella who eats grass.</span>
+      <span> Name: {cow.name}</span>
+      <span> Description: {cow.description}</span>
     </li>
   );
 };

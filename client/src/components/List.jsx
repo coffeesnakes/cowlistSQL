@@ -1,10 +1,16 @@
 import React from 'react';
 import Entry from './Entry.jsx';
 
-const List = props => {
+const List = ({cows}) => {
   return (
-    <ul>
-      < Entry />
+    <ul className="cows">
+
+      {cows.map((cow) => (
+
+      < Entry key={cow.id} cow={cow} />
+
+      ))}
+
     </ul>
   )
 };
