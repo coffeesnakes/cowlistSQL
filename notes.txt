@@ -1,9 +1,32 @@
+                    _______________PART 1_______________
+                        THIS IS BUILDING THE backend
+*protip: use the docs for express and sql, it's almost just copy paste with
+a few edits to make the sync between your server and db.
 
+Assign your port
+Make sure express is installed & required, assign app = express()
+Require bodyparser and use  for parsing, make sure you globally parse JSON
 
+import the database via db=require(DB../PATH../HERE)
 
+serve the server (client/server relation)
+
+create your routes with appropriate paths to controllers (app.get, app.post)
+(remember to import controllers so you can use in routes)
+
+Use app.listen with a console log to ensure server is running
 
                     _______________PART 2_______________
+                      THIS IS BUILDING THE static frontend
+* use React docs*
+set up the render in index.jsx
+Create a static app and test incrementally that the app renders with a div&text
 
+Create components and render static data in them, import those components in App
+test if those components render static data properly when held in App.
+
+                    _______________PART 3_______________
+                        THIS IS RENDERING DYNAMIC DATA
 Currently have static data rendering, and with now creating a GET request using axios
 Axios will use the server, and see app.get('/cows', and then a cb to controllers)
 Inside of server we have controllers we send server status and data to the models
@@ -17,4 +40,4 @@ we can then use props to pass down this information throughout the App, because 
 in the render and return of app where we hold all of our components we pass cows={this.state.cows}
 inside of the actual Entry.jsx file we will access props to display data dynamically.
 
-              THIS IS RENDERING DYNAMIC DATA
+                       THIS IS RENDERING DYNAMIC DATA
