@@ -13,4 +13,5 @@ Create MySQL schema
 Write DB queries for GET and POST requests
 Refactor frontend to connect to backend
 
- doot doot
+
+nextTodo: render dynamic data
