@@ -2,16 +2,15 @@ Tasks
 Set up development environment  x
 Structure project to transpile using webpack   x
 Serve application with Node/Express    x
-Create GroceryList database in MySQL   x
-Connect Node server to MySQL DB using npm mysql package   x
-Build front end
-Develop front end application (add groceries to local state)
-Build working backend
-Create route GET /api/groceries
+Create GroceryList database in MySQL                        ===X===
+Connect Node server to MySQL DB using npm mysql package     ===X===
+Build front end                                             ===X===
+Develop front end application (add groceries to local state)===X===
+Build working backend                                       ===X===
+Create route GET /api/groceries                             ===X===
 Create route POST /api/groceries
-Create MySQL schema
+Create MySQL schema                                         ===X===
 Write DB queries for GET and POST requests
 Refactor frontend to connect to backend
 
 
-nextTodo: render dynamic data

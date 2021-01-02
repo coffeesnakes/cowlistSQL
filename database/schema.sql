@@ -11,4 +11,3 @@ CREATE TABLE cows (
   description  VARCHAR(200) NOT NULL,
   PRIMARY KEY  (id)
 );
-insert into cows (name, description) values ('Bessy', 'A fine lass, she was.');

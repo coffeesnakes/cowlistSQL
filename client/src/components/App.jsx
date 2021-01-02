@@ -1,4 +1,7 @@
 import React from "react";
+import { Fragment } from 'react';
+import List from './List.jsx';
+import Form from './Form.jsx';
 import axios from "axios";
 
 class App extends React.Component {
@@ -28,9 +31,13 @@ class App extends React.Component {
 
   // axios post
   render() {
-    return ( <div>test</div>
+    return (
+      <Fragment>
+        <List />
+        <Form />
 
-    )
+      </Fragment>
+    );
   }
 }
 
