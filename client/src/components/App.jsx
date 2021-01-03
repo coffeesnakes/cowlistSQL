@@ -14,6 +14,8 @@ class App extends React.Component {
 
     // bindings here
     this.getCows = this.getCows.bind(this);
+    this.addCow = this.addCow.bind(this);
+
   }
 
 
@@ -34,13 +36,19 @@ class App extends React.Component {
   }
 
   // axios post
+  addCow(cow) {
+    axios.post('/cows', cow)
+    .then(this.getCows)
+    .catch(console.log)
+  }
+
   render() {
     return (
       <Fragment>
 
         < Header />
         <List cows={this.state.cows} />
-        <Form />
+        <Form addCow={this.addCow} />
 
       </Fragment>
     );

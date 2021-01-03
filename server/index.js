@@ -15,6 +15,7 @@ app.use(bodyParser.json());
 
 // routes
 app.get('/cows', controllers.getCows);
+app.post('/cows', controllers.addCow);
 
 
 app.listen(port, console.log(`listening on: ${port}`));

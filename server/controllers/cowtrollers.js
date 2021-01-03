@@ -10,6 +10,19 @@ const getCows = (req, res) => {
   })
 }
 
+const addCow = (req, res) => {
+  models.addCow(req.body, (err, data) => {
+    if (err) {
+      res.status(400).send(err);
+    } else {
+      res.status(200).send(data);
+    }
+  })
+}
+
+
+
 module.exports = {
-  getCows
+  getCows,
+  addCow
 }

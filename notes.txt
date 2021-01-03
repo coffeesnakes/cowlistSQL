@@ -39,5 +39,8 @@ We then use this data we've gotten from the server and after binding the get req
 we can then use props to pass down this information throughout the App, because its a tree.
 in the render and return of app where we hold all of our components we pass cows={this.state.cows}
 inside of the actual Entry.jsx file we will access props to display data dynamically.
-
                        THIS IS RENDERING DYNAMIC DATA
+
+                    _______________PART 4_______________
+                    THIS IS HANDLING EVENTS & FORM
+
