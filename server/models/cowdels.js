@@ -11,7 +11,19 @@ const addCow = (cow, callback) => {
   });
 };
 
+const deleteCow = (id, callback) => {
+  db.query('select * from cows where id=?', [id],
+  (err, select) => {
+    if (err) {
+      callback(err);
+    } else {
+      db.query('delete from cows where id=?', [id], callback(err, select));
+    }
+  });
+};
+
 module.exports = {
   getCows,
-  addCow
+  addCow,
+  deleteCow
 };

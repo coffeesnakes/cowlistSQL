@@ -16,6 +16,7 @@ app.use(bodyParser.json());
 // routes
 app.get('/cows', controllers.getCows);
 app.post('/cows', controllers.addCow);
+app.delete('/cows/:id', controllers.deleteCow);
 
 
 app.listen(port, console.log(`listening on: ${port}`));

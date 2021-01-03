@@ -7,8 +7,8 @@ const getCows = (req, res) => {
     } else {
       res.status(200).send(cows);
     }
-  })
-}
+  });
+};
 
 const addCow = (req, res) => {
   models.addCow(req.body, (err, data) => {
@@ -17,12 +17,22 @@ const addCow = (req, res) => {
     } else {
       res.status(200).send(data);
     }
+  });
+};
+
+
+const deleteCow = (req, res) => {
+  models.deleteCow(req.params.id, (err, data) => {
+    if (err) {
+      res.status(400).send(err);
+    } else {
+      res.status(200).send(data)
+    }
   })
 }
 
-
-
 module.exports = {
   getCows,
-  addCow
+  addCow,
+  deleteCow
 }

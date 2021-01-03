@@ -1,13 +1,13 @@
 import React from 'react';
 import Entry from './Entry.jsx';
 
-const List = ({cows}) => {
+const List = (props) => {
   return (
     <ul className="cows">
 
-      {cows.map((cow) => (
+      {props.cows.map((cow) => (
 
-      < Entry key={cow.id} cow={cow} />
+      < Entry key={cow.id} cow={cow} deleteCow={props.deleteCow}/>
 
       ))}
 

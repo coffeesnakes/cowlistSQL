@@ -15,7 +15,7 @@ class App extends React.Component {
     // bindings here
     this.getCows = this.getCows.bind(this);
     this.addCow = this.addCow.bind(this);
-
+    this.deleteCow = this.deleteCow.bind(this);
   }
 
 
@@ -42,14 +42,17 @@ class App extends React.Component {
     .catch(console.log)
   }
 
+  deleteCow(id) {
+    axios.delete(`/cows/${id}`)
+    .then(this.getCows)
+    .catch(console.log)
+  }
   render() {
     return (
       <Fragment>
-
-        < Header />
-        <List cows={this.state.cows} />
+        <Header />
         <Form addCow={this.addCow} />
-
+        <List cows={this.state.cows} deleteCow={this.deleteCow}  />
       </Fragment>
     );
   }
