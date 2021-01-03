@@ -23,14 +23,18 @@ const deleteCow = (id, callback) => {
 };
 
 const editCow = (id, name, callback) => {
-  db.query('update cows set name=? where id=?', [name, id], (err, success)=>{
-    if (err) {
-      callback(err);
-    } else {
-      db.query('select * from cows where id=?', [id], callback)
+  db.query(
+    'UPDATE cows set name=? WHERE id=?', [name, id], (err, success) => {
+      if (err) {
+        callback(err);
+      } else {
+        db.query(
+          'SELECT * FROM cows WHERE id=?', [id], callback
+        );
+      }
     }
-  })
-}
+  );
+};
 
 module.exports = {
   getCows,

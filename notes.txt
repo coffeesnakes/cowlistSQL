@@ -16,6 +16,7 @@ create your routes with appropriate paths to controllers (app.get, app.post)
 
 Use app.listen with a console log to ensure server is running
 
+
                     _______________PART 2_______________
                       THIS IS BUILDING THE static frontend
 * use React docs*
@@ -24,6 +25,7 @@ Create a static app and test incrementally that the app renders with a div&text
 
 Create components and render static data in them, import those components in App
 test if those components render static data properly when held in App.
+
 
                     _______________PART 3_______________
                         THIS IS RENDERING DYNAMIC DATA
@@ -40,6 +42,7 @@ we can then use props to pass down this information throughout the App, because 
 in the render and return of app where we hold all of our components we pass cows={this.state.cows}
 inside of the actual Entry.jsx file we will access props to display data dynamically.
                        THIS IS RENDERING DYNAMIC DATA
+
 
                     _______________PART 4_______________
                        THIS IS HANDLING EVENTS & FORM
@@ -58,6 +61,19 @@ fields, so it'll set state with just the information in the input fields
 lifting state up to the App, adding the new cow derived from Form components inputs.
 
                   THIS IS addCow() BACKEND FUNCTIONALITY
+sets up app.post ROUTE, with the path to /cows, and a callback to controllers.
+
+In controllers we have models imported and send req.body (the json data)
+to the models addCow function, we also send the server status with the data.
+
+Models addCow takes in the cow which is the req.body from controllers
+with that we set up the actualy db.query that will insert the new cow and its
+respective properties into the database!
+
+
+                    _______________PART 4_______________
+
+                  THIS IS deleteCow() BACKEND FUNCTIONALITY
 
 goes to server which holds the app.delete ROUTE
  which carries the cows/:id for path and callback to controllers
@@ -68,3 +84,7 @@ goes to server which holds the app.delete ROUTE
  the ID passed into deleteCow from controllres is used in the db.query which
  uses proper syntax to select the cow with that ID and proceeds to delete that cow from the database.
 
+
+
+
+                    _______________PART 5_______________

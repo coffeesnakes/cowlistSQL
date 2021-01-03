@@ -32,14 +32,14 @@ const deleteCow = (req, res) => {
 }
 
 const editCow = (req, res) => {
-  models.editCow(req.params.id, req.body.name, (err, editedCow) => {
+  models.editCow(req.params.id, req.body.name, (err, data) => {
     if (err) {
       res.status(400).send(err);
     } else {
       res.status(200).send(data)
     }
-  })
-}
+  });
+};
 
 module.exports = {
   getCows,
