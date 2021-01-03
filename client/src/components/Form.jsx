@@ -36,14 +36,24 @@ class Form extends React.Component {
     return (
       <form>
         <label htmlFor="name">Name: </label>
-          <input id="name" name="name" value={this.state.name} onChange={this.handleInput}
-          />
-          <label htmlFor="description">Description: </label>
-            <input id="description" name="description" value={this.state.description} onChange={this.handleInput}
-            />
-            <button onClick={this.handleSubmit}>ADD COW</button>
+        <input
+          id="name"
+          name="name"
+          size="13"
+          value={this.state.name}
+          onChange={this.handleInput}
+        /> < br/>
+        <label htmlFor="description">Description: </label>
+        <input
+          id="description"
+          name="description"
+          size="13"
+          value={this.state.description}
+          onChange={this.handleInput}
+        />
+        <button onClick={this.handleSubmit}>ADD COW</button>
       </form>
-    )
+    );
   }
 }
 
