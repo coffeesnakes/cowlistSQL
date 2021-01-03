@@ -17,6 +17,6 @@ app.use(bodyParser.json());
 app.get('/cows', controllers.getCows);
 app.post('/cows', controllers.addCow);
 app.delete('/cows/:id', controllers.deleteCow);
-
+app.put('/cows/:id', controllers.editCow);
 
 app.listen(port, console.log(`listening on: ${port}`));

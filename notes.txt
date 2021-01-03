@@ -42,5 +42,29 @@ inside of the actual Entry.jsx file we will access props to display data dynamic
                        THIS IS RENDERING DYNAMIC DATA
 
                     _______________PART 4_______________
-                    THIS IS HANDLING EVENTS & FORM
+                       THIS IS HANDLING EVENTS & FORM
+
+                  THIS IS addCow() FRONTEND FUNCTIONALITY
+Create axios post to send the new cow to database
+ .then call getCows to rerender
+
+Pass addCow to the Form component
+
+Create input eHandlers to target a key and change its value with setState
+
+Create submit eHandler that calls addCow with the state of Form as parameters
+the state of Forms parameters here are the information in the little input box
+fields, so it'll set state with just the information in the input fields
+lifting state up to the App, adding the new cow derived from Form components inputs.
+
+                  THIS IS addCow() BACKEND FUNCTIONALITY
+
+goes to server which holds the app.delete ROUTE
+ which carries the cows/:id for path and callback to controllers
+
+ In controllers deleteCow sends req.paramid to the models and server status&data
+
+ Models has the deleteCow function that takes in the id and a callback.
+ the ID passed into deleteCow from controllres is used in the db.query which
+ uses proper syntax to select the cow with that ID and proceeds to delete that cow from the database.
 
